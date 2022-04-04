@@ -10,7 +10,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { DatePipe } from '@angular/common'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MainPageComponent } from './main-page/main-page.component';
-import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { LoginComponent } from './login/login.component';
 import { MatIconModule } from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
@@ -20,7 +19,6 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     AppComponent,
     FeedbackComponent,
     MainPageComponent,
-    EmployeeDetailsComponent,
     LoginComponent,
   ],
   imports: [
