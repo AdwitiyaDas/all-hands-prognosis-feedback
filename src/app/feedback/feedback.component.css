@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@340&display=swap');
+      html, body {
+      
+      min-height: 100vh;
+      background-color: #F4F0F0;
+      }
+      body, div, form, input, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
+    
+      }
+      h1 {
+      font-weight: 400;
+      }
+      h4 {
+      margin: 15px 0 4px;
+      }
+     
+      .testbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 3px;
+      }
+      form {
+      width: 100%;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px #ccc; 
+      }
+      .disclaimer
+      {
+        margin-top: 2%;
+        margin-left: 2%;
+        margin-right: 2%;
+      }
+      .disclaimer p
+      {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: large;
+        padding: 5px;
+      }
+      .name
+      {
+        margin-left: 2%;
+      }
+      .theme_font
+      {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: large;
+
+      }
+      .heading-font
+      {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 2.6vw;
+        margin-left: 20%; 
+        color: #03989E;
+      }
+      .name_email label{
+        margin-left: 2%;
+      }
+      .questionnaire
+      {
+        margin: 2%;
+      }
+      .mat-icon-button
+      {
+        background-color: #F4F0F0;
+      }
+      .mat-icon {
+        font-size: 35px !important;
+        font-weight: 100;
+        align-items: center;
+     }
+      .sentiment_very_dissatisfied {
+        color: #5e5e5e;
+        
+      }
+      .sentiment_very_dissatisfied:hover {
+        color: #9D0404;
+      }
+      .sentiment_very_dissatisfied_selected
+      {
+        color: #9D0404;
+      }
+      .sentiment_dissatisfied {
+        color: #5e5e5e;
+      }
+      .sentiment_dissatisfied:hover {
+        color:#FFC300;
+      }
+      .sentiment_dissatisfied_selected {
+        color: #FFC300;
+      }
+      .sentiment_satisfied {
+        color: #5e5e5e;
+      }
+      .sentiment_satisfied:hover {
+        color: #7FBF3F;
+      }
+      .sentiment_satisfied_selected {
+        color: #7FBF3F;
+      }
+
+      .sentiment_very_satisfied {
+        color: #5e5e5e;
+      }
+      .sentiment_very_satisfied:hover {
+        color: #267226;
+      }
+      .sentiment_very_satisfied_selected {
+        color: #267226;
+      }
+
+     
+
+      input {
+      width: calc(100% - 10px);
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      vertical-align: middle;
+      }
+      .email {
+      display: block;
+      width: 45%;
+      }
+      input:hover, textarea:hover {
+      outline: none;
+      border: 1px solid #095484;
+      }
+      th, td {
+      width: 15%;
+      padding: 15px 0;
+      border-bottom: 1px solid #ccc;
+      text-align: center;
+      vertical-align: unset;
+      line-height: 18px;
+      font-weight: 400;
+      word-break: break-all;
+      }
+      .first-col {
+      width: 40%;
+      text-align: left;
+      }
+      table {
+      width: 100%;
+      }
+      textarea {
+      width: calc(100% - 6px);
+      }
+      .btn-block {
+      margin-top: 20px;
+      text-align: center;
+      }
+      .submit-button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      -webkit-border-radius: 5px; 
+      -moz-border-radius: 5px; 
+      border-radius: 5px; 
+      background-color: #03989E;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      margin-left: 45%;
+      }
+      .submit-button:hover {
+      background-color: #0666a3;
+      }
+      @media (min-width: 568px) {
+      th, td {
+      word-break: keep-all;
+      }
+      }
+    
+
+      .faceImage{
+        width: 30px;
+        height: 30px;
+      }
+
+      #radioYN{
+        font-size: medium;
+      }
+    
+    .logout-btn
+    {
+      font-size: 20px !important;
+      font-weight: 20;
+      align-items: center;
+      margin-left: 25%;
+      background-color: #03989E;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      -webkit-border-radius: 5px; 
+      -moz-border-radius: 5px; 
+      font-family: 'Josefin Sans', sans-serif;
+      padding: 5px;
+      position: relative;
+      height: 35px;
+      width: 150px;
+    }
+    
+
+    .logout-btn-icon
+    {
+      margin: 5px;
+      font-size: 25px !important;
+      font-weight: 10;
+      position: absolute;
+      top: 1.0px;
+      left: 25px;
+    }
+
+
+    .logout-btn > span{
+          position: absolute;
+          top: 9.5px;
+          left: 59px;
+    }
+
+    .logout-btn:hover {
+
+      background-color: rgb(241, 193, 102);
+      }   
+      
+  .logout-btn:hover::before {
+      width: 100%;
+  }

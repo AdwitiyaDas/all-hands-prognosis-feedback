@@ -1,0 +1,167 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div *ngIf="showHome" class="top_container">
+    <div style="display: flex; height: 12%; width: 100%;  justify-content: space-between;">
+      <div class="image_container">
+        <img src="assets/kipi_logo.png" id="logo_img">
+      </div>
+      <div style="display: flex; position: sticky;">
+        <a class="header_links" href="#">Home</a>
+        <a class="header_links" href="#">Dashboard</a>
+        <a class="header_links" href="/employee_feedback">Feedback form</a>
+        <a class="header_links" href="/employeeDetails">Employee Details</a>
+        <a class="header_links" href="#contact">Contact Us</a>
+        <a class="header_links" style="margin-right: 10px;" (click)="loginPopUpMethod()">Login/Signup</a>
+        <!--<button  id="signup_btn">
+          <a class="header_links">Login/Signup</a>
+        </button>-->
+
+      </div>
+    </div>
+    <div id="slider_container">
+
+
+    </div>
+    <div id="our_services">
+      <h2 class="h2_head">OUR SERVICES</h2>
+      <div style="display: flex;">
+        <div class="services_description">
+          <img src="assets/our_services_image1.png">
+          <h5>SENTIMENT ANALYSIS</h5>
+          <p>We at Kipi provide sentiment Analysis for the feedback of our employees .
+            So that you will be able to make the most out of their words
+          </p>
+        </div>
+        <div class="services_description">
+          <img src="assets/our_services_image2.png">
+          <h5>SENTIMENT ANALYSIS</h5>
+          <p>We at Kipi provide sentiment Analysis for the feedback of our employees .
+            So that you will be able to make the most out of their words
+          </p>
+        </div>
+        <div class="services_description">
+          <img src="assets/our_services_image3.png">
+          <h5>SENTIMENT ANALYSIS</h5>
+          <p>We at Kipi provide sentiment Analysis for the feedback of our employees .
+            So that you will be able to make the most out of their words
+          </p>
+        </div>
+        <div class="services_description">
+          <img src="assets/our_services_image1.png">
+          <h5>SENTIMENT ANALYSIS</h5>
+          <p>We at Kipi provide sentiment Analysis for the feedback of our employees .
+            So that you will be able to make the most out of their words
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="about_us">
+      <img src="assets/about_us.jpg" alt="">
+      <div>
+        <h2 class="h2_head">ABOUT US</h2>
+        <p> We are Apisero. long established fact that a reader will be distracted by the readable content
+          of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+          normal distribution of letters, as opposed to using 'Content here, content here', making it
+          look like readable English. Many desktop publishing packages and
+          web page editors now use Lorem Ipsum as their default model text, a
+          nd a search for 'lorem ipsum' will uncover many web sites still in their infanc</p>
+      </div>
+    </div>
+
+    <div style="background-image: linear-gradient(90deg, rgba(179, 217, 67, 1), rgba(21, 22, 24, 0.3));
+    " id="contact">
+      <h2 class="h2_head" style="margin-top:20px">CONTACT US</h2>
+      <div id="contact_us">
+        <div class="contact_us_box">
+          <h2> Reach at..</h2><br>
+          <a>
+            <img src="assets/location.png" alt="" class="contact_icons" style="margin-left: -9.5vw" />
+            <span class="contact_span">Noida, India</span>
+          </a>
+          <br>
+          <a>
+            <img src="assets/call.png" alt="" class="contact_icons" style="margin-left: -9vw;" />
+            <span class="contact_span">0123456789</span>
+          </a>
+          <br>
+          <a>
+            <img src="assets/mail.png" alt="" class="contact_icons" style="margin-left: -8.5vw;" />
+            <span class="contact_span">abcd@kipi.bi</span>
+          </a>
+
+        </div>
+        <div class="contact_us_box">
+          <h5>
+            ABOUT
+          </h5>
+          <p style="font-size: 14px;">
+            Beatae provident nobis mollitia magnam voluptatum, unde dicta facilis minima veniam corporis laudantium
+            alias tenetur eveniet illum reprehenderit fugit a delectus officiis blanditiis ea.
+          </p>
+        </div>
+        <div class="contact_us_box">
+          <h5>
+            NewsLetter
+          </h5>
+          <input type="text" placeholder="Enter your email" id="newsletter_input">
+          <button>Subscribe</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="background_blur">
+
+  </div>
+
+  <div class="bg-modal" #bgmodal >
+    <div class="modal-contents">
+      <span>
+        <button (click)="cancelPopUp()" id="cancel_btn">X</button>
+      </span>
+      <h2>Login</h2>
+      <form>
+        <div class="imgcontainer">
+          <img src="assets/login_img.png" alt="Avatar" class="avatar">
+        </div>
+        <div class="infocontainer">
+          <div>
+            <b class="label_text">Username</b>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+          </div>
+
+          <div>
+            <b class="label_text">Password</b>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+          </div>
+          <div>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+
+          <div>
+            <button type="submit" id="login_btn">Login</button><br>
+          </div>
+
+        </div>
+      </form>
+
+      <!-- <p>Modal contents</p>
+    <button (click)="cancelPopUp()">Cancel</button>-->
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<body>
+    <header>
+        <div>
+            <img src="/assets/ALL_HANDS_PROGNOSIS_LOGIN_PAGE_TRANSPARENT.png" />
+        </div>
+        <!-- <div>
+            <h1 class="login-header">Login Portal</h1>
+        </div> -->
+       
+    </header>
+    <main>
+        <form [formGroup]="loginform" id="login_form" class="form_class"  *ngIf="!isEmployeeFirstLogin" (ngSubmit)="onSubmit()">
+            <div class="form_div">
+                <label>Employee Id:</label>
+                <input class="field_class" name="employeeid" formControlName="employeeid" type="text" placeholder="Enter your Employee Id" autofocus>
+                <label>Password:</label>
+                <input id="pass" class="field_class" name="password" formControlName="password" type="password"  placeholder="Enter your password">
+                
+                <button class="submit_class" type="submit">Login</button>
+            </div>
+            
+        </form>
+
+
+        <form [formGroup]="signUpForm" id="signUpForm" class="form_class"  *ngIf="isEmployeeFirstLogin" (ngSubmit)="signUp()">
+            <div class="form_div">
+                <label>Employee Id:</label>
+                <input class="field_class" name="employeeid" formControlName="employeeid" type="text" placeholder="Enter your Employee Id" autofocus>
+                <label>New Password:</label>
+                <input id="pass" class="field_class" name="password" formControlName="password" type="password"  placeholder="Enter new password">
+                <label>Confirm Password:</label>
+                <input id="confirm_pass" class="field_class" name="confirmPassword" formControlName="confirmPassword" type="password"  placeholder="Confirm new password">
+                
+                <button class="submit_class" type="submit">Sign Up</button>
+            </div>
+
+        </form>
+
+    </main>
+    <footer>
+       
+    </footer>
+</body>
