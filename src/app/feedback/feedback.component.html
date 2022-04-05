@@ -11,9 +11,16 @@
   
   </head>
   <body>
-    <div>
-      <img src="/assets/ALL_HANDS_PROGNOSIS_LOGO.png" />
-      <label class="heading-font">Employee Feedback</label>
+    <div class="loader-div" *ngIf="isLoading">
+      <div class="loader"></div>
+  </div>
+  <div>
+    <div class="header">
+
+        <img class="logo-image" src="/assets/favicon-logo.png" />
+        <label class="heading-font">Employee Feedback</label>
+
+     
       <button class="logout-btn" (click)="logout()">
         <mat-icon  class="logout-btn-icon">logout</mat-icon>
         <span> Logout </span>
@@ -74,6 +81,7 @@
       <div>
         <button class="submit-button theme_font" (click)="submitForm()">Submit Feedback</button>
       </div>
-  
+  </div>
+   
   </body>
 </html>

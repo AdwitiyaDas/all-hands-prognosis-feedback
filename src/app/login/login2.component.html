@@ -1,0 +1,69 @@
+<body>
+    <div class="loader-div" *ngIf="isLoading">
+        <div class="loader"></div>
+    </div>
+    <div class="login-page">
+        <div class="login-box">
+            
+            <div class="logo-box">
+                <label>Welcome to</label>
+                <img class="logo-image" src="../../assets/allHandsLogo.png">
+           
+                <span class="company-name-font">All <br> Hands <br> Prognosis</span>
+
+                <p>Contact us at: <b>all-hands-prognosis@gmail.com</b></p>
+            </div>
+            <div class="survey-image-box">
+                <img class="survey-image" src="../../assets/SurveyImage_flipped.png">
+            </div>
+            <div  class="form-box">
+                <form [formGroup]="loginform" id="login_form" class="form_class"  *ngIf="!isEmployeeFirstLogin" (ngSubmit)="onSubmit()">
+                    <div class="form_div">
+                     
+
+                        <div class="form-inputs-div">
+                            <label>Employee Id:</label>
+                            <br>
+                            <input class="field_class" name="employeeid" formControlName="employeeid" type="text" placeholder="Enter your Employee Id">
+                        </div>
+                        <div class="form-inputs-div">
+                            <label>Password:</label>
+                            <br>
+                            <input id="pass" class="field_class" name="password" formControlName="password" type="password"  placeholder="Enter your password">
+                        </div>
+                       
+                      
+                        
+                        <button class="submit-form-button" type="submit">Login</button>
+                    </div>
+                    
+                </form>
+        
+        
+                <form [formGroup]="signUpForm" id="signUpForm" class="form_class"  *ngIf="isEmployeeFirstLogin" (ngSubmit)="signUp()">
+                    <div class="form_div">
+                        <div class="form-inputs-div">
+                            <label>Employee Id:</label>
+                            <br>
+                            <input class="field_class" name="employeeid" formControlName="employeeid" type="text" placeholder="Enter your Employee Id" autofocus>
+                        </div>
+                        <div class="form-inputs-div">
+                            <label>New Password:</label>
+                            <br>
+                            <input id="pass" class="field_class" name="password" formControlName="password" type="password"  placeholder="Enter new password">
+                        </div>
+                        <div class="form-inputs-div">
+                            <label>Confirm Password:</label>
+                            <br>
+                            <input id="confirm_pass" class="field_class" name="confirmPassword" formControlName="confirmPassword" type="password"  placeholder="Confirm new password">
+                        </div>
+                        <button class="submit-form-button" type="submit">Sign Up</button>
+                    </div>
+        
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</body>

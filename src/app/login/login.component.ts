@@ -7,8 +7,8 @@ import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  templateUrl: './login2.component.html',
+  styleUrls: ['./login2.component.css']
 })
 export class LoginComponent implements OnInit {
   isEmployeeFirstLogin = false
@@ -26,11 +26,11 @@ export class LoginComponent implements OnInit {
   md5 = new Md5();
   hostname ="https://employee-feedback-app-backend.herokuapp.com";
   //hostname = "http://127.0.0.1:5000";
-
+  isLoading = true;
   constructor(private router: Router, private http: HttpClient, private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-    
+    this.isLoading=false;
   }
   signUp(): void{
     var data={
@@ -79,8 +79,10 @@ export class LoginComponent implements OnInit {
     }
     /* Password encryprion needed */
     else{
+      this.isLoading=true;
       data['password']=Md5.hashStr(this.signUpForm.value.confirmPassword).toString()
       this.http.post<any>(`${this.hostname}/api/signup`,data ).subscribe(res => {
+         this.isLoading=false;
           if(res['code'] == 200)
             this.router.navigateByUrl('/employee_feedback/'+data.employeeid.toString());
             //this.router.navigateByUrl('/employee_feedback', { state: this.signUpForm.value.employeeid });
@@ -136,15 +138,17 @@ export class LoginComponent implements OnInit {
     }
 
     else{
-
+      this.isLoading=true;
       data['password']=Md5.hashStr(this.loginform.value.password).toString()
 
       this.http.post<any>(`${this.hostname}/api/login`,data ).subscribe(res => {
-
+        this.isLoading=false;
           if(res['code'] == 200)
           {
+            this.isLoading=true;
             this.http.post<any>(`${this.hostname}/api/checkLastFeedbackDate`,{empId:this.loginform.value.employeeid} ).subscribe(response=>
               {
+                this.isLoading=false;
                 if(response['feedbackAllowedCode'] == 200)
                   this.router.navigateByUrl('/employee_feedback/'+data.employeeid.toString());
                 else if(response['feedbackAllowedCode'] == 401)
@@ -194,7 +198,6 @@ export class LoginComponent implements OnInit {
          
           else if(res['code'] == 400)
           {
-   
             this.isEmployeeFirstLogin = true
           }
           else if(res['code']==401)

@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&family=Hurricane&family=Montserrat:wght@500&display=swap');
+
+.loader-div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;  
+}
+.loader {
+    border: 12px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 12px solid #84BCDA;
+    width: 70px;
+    height:70px;
+    align-items: center;
+    justify-content: center;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+  
+.center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.login-page {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to top left, #fff, #ddd);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.survey-image-box
+{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 32.5vh;
+    left: 67%;
+}
+
+.survey-image{
+    height: 500px;
+    width: 500px;
+}
+.login-box
+{  
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  
+    /* box-shadow: 5px 8px 8px #5FB49C; */
+
+}
+
+
+
+.logo-box
+{
+    height: 500px;
+    width: 400px;   
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    background-color: #84BCDA;
+    /* background-image: linear-gradient(to top left, #5FB49C, #87d2bd); */
+    position: relative;
+}
+.logo-box > label{
+    position:absolute;
+    top: 15px;
+    font-family: 'Hurricane', cursive;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.logo-box > p{
+    position:absolute;
+    top: 415px;
+    font-family: 'Baskervville', serif;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.logo-image
+{
+    height: 258px;
+    width: 382px;
+    position: absolute;
+    top: 75px;
+}
+
+.company-name-font
+{
+    /* font-family: 'Hurricane', cursive; */
+    font-family: 'Baskervville', serif;
+    text-transform: uppercase;
+    color: #fff;
+    font-size:2rem;
+    position: absolute;
+    top: 210px;
+    align-items: center;
+    text-align: center;
+}
+
+
+.form-box
+{
+    height: 500px;
+    width: 400px;   
+    background-color: rgb(255, 255, 247);
+    border-right: #84BCDA solid;
+    border-top: #84BCDA solid;
+    border-bottom: #84BCDA solid;
+
+
+}
+
+
+.form_class {
+    
+    padding: 40px;
+    border-radius: 8px;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #84BCDA;
+}
+.form_div {
+    text-transform: uppercase;
+}
+.form_div > label {
+    letter-spacing: 3px;
+    font-size: 1rem;
+   
+}
+
+.form-inputs-div 
+{   
+    margin-top: 10px;
+    font-family: inherit;
+    width: 100%;
+    padding:10px;
+}
+
+.form-inputs-div > input
+{
+    border: none;
+    outline: 0;
+    width: 100%;
+    border-bottom: 2px solid #84BCDA;
+    margin-top: 8px;
+}
+.form-inputs-div>input:focus
+{
+    border: none;
+    outline: 0;
+    border-bottom: 2px solid #dd9332;
+}
+
+.submit-form-button
+{
+    padding: 10px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #84BCDA;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+    margin-top: 50px;
+    margin-left: 110px;
+
+}
+
+
+.submit-form-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #84BCDA;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+   }
+   
+   .submit-form-button:hover {
+    color: white;
+   }
+   
+   .submit-form-button:hover::before {
+    width: 100%;
+   }

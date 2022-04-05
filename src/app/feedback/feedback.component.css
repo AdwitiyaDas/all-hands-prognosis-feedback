@@ -20,7 +20,54 @@
       h4 {
       margin: 15px 0 4px;
       }
-     
+
+  .loader-div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    background-color: rgba(0, 0, 0, 0.6);  
+    z-index: 2;
+    }
+    .loader {
+        border: 12px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 12px solid #84BCDA;
+        width: 70px;
+        height:70px;
+        align-items: center;
+        justify-content: center;
+        animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    .header
+    {
+      display: flex;
+      align-items: center;
+    }
+    .center {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+     .logo-image
+     {
+       height: 130px;
+       width: 200px;
+
+     }
       .testbox {
       display: flex;
       justify-content: center;
@@ -60,8 +107,8 @@
       {
         font-family: 'Josefin Sans', sans-serif;
         font-size: 2.6vw;
-        margin-left: 20%; 
-        color: #03989E;
+        color: #84BCDA;
+        margin-left: 25%;
       }
       .name_email label{
         margin-left: 2%;
@@ -167,7 +214,7 @@
       -webkit-border-radius: 5px; 
       -moz-border-radius: 5px; 
       border-radius: 5px; 
-      background-color: #03989E;
+      background-color: #84BCDA;
       font-size: 16px;
       color: #fff;
       cursor: pointer;
@@ -198,7 +245,7 @@
       font-weight: 20;
       align-items: center;
       margin-left: 25%;
-      background-color: #03989E;
+      background-color: #84BCDA;
       color: #fff;
       border: none;
       border-radius: 5px;
@@ -231,7 +278,7 @@
 
     .logout-btn:hover {
 
-      background-color: rgb(241, 193, 102);
+      background-color: #0666a3;
       }   
       
   .logout-btn:hover::before {

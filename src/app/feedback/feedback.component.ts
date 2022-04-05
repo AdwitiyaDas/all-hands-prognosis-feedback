@@ -30,29 +30,31 @@ export class FeedbackComponent implements OnInit {
   questionDict = {}
   hostname ="https://employee-feedback-app-backend.herokuapp.com"
   //hostname = "http://127.0.0.1:5000"
- 
+  isLoading = false;
   feedbackObjArray =  Array<questionObj>()
   ratingsArray = Array<boolean>()
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private formBuilder: FormBuilder, private http: HttpClient, public datepipe: DatePipe) {
-      // this.feedbackObjArray.push({
-      //    'id' : Number(1),
-      //    'desc': 'abc',
-      //    'ratings': [false,false,false,false]
-      //  })
+      /* this.feedbackObjArray.push({
+         'id' : Number(1),
+         'desc': 'abc',
+         'ratings': [false,false,false,false]
+       })
 
-      //  this.feedbackObjArray.push({
-      //   'id' : Number(2),
-      //   'desc': 'def',
-      //   'ratings': [false,false,false,false]
+       this.feedbackObjArray.push({
+        'id' : Number(2),
+        'desc': 'def',
+        'ratings': [false,false,false,false]
        
-      // })
+      }) */
   }
 
   ngOnInit(): void {
+    this.isLoading = true
+
     this.eid = String(this.activatedRoute.snapshot.paramMap.get('id'));
-    console.log(this.eid)
+    
     this.http.post<any>(`${this.hostname}/api/getEmployeeName`,{empId:this.eid}).subscribe(res => {
-          
+        
         if(res['code'] == 200)
         {
           this.name=res['empName']
@@ -61,12 +63,17 @@ export class FeedbackComponent implements OnInit {
           
         else if(res['code']==401)
         {
+          this.isLoading = false;
           Swal.fire('Unauthorized Alert!') ;
           this.router.navigateByUrl('');
         }
         
         else
+        {
+          this.isLoading = false;
           Swal.fire('Oops!! Something went wrong!');        
+        }
+          
   })
   
 
@@ -74,7 +81,7 @@ export class FeedbackComponent implements OnInit {
  getQuestions()
  {
         this.http.post<any>(`${this.hostname}/api/getFeedbackQuestions`,{empId:this.eid}).subscribe(res => {
-                      
+          this.isLoading = false;      
           if(res['code'] == 200)
           {
             this.questionDict = res['questionDict']
@@ -136,14 +143,14 @@ export class FeedbackComponent implements OnInit {
    
     if(!answerMissing)
     {
-    
+      this.isLoading = true;
       var data={
         'empId': this.eid,
         'entryDate' : this.latest_date,
         'feedbackJson' : this.feedbackObjArray
       }
       this.http.post<any>(`${this.hostname}/api/submitFeedbackData`,data).subscribe(res => {
-          
+        this.isLoading = false;
         if(res['code'] == 200)
           Swal.fire({
             title: '<h2 class="theme_font">Success!</h2>',
