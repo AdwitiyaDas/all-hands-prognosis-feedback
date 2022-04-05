@@ -28,8 +28,8 @@ export class FeedbackComponent implements OnInit {
   lname = "sahu"
   eid =""
   questionDict = {}
-  //hostname ="https://employee-feedback-app-backend.herokuapp.com"
-  hostname = "http://127.0.0.1:5000"
+  hostname ="https://employee-feedback-app-backend.herokuapp.com"
+  //hostname = "http://127.0.0.1:5000"
   isLoading = false;
   feedbackObjArray =  Array<questionObj>()
   ratingsArray = Array<boolean>()
