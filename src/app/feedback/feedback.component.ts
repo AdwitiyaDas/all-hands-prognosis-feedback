@@ -24,9 +24,8 @@ export class FeedbackComponent implements OnInit {
   Salary: any;
   currentDate = new Date();
   latest_date = this.datepipe.transform(this.currentDate, 'dd-MM-yyyy');
-  name = "USER"
-  lname = "sahu"
-  eid =""
+  name = "User"
+  eid ="1000"
   questionDict = {}
   hostname ="https://employee-feedback-app-backend.herokuapp.com"
   //hostname = "http://127.0.0.1:5000"
@@ -41,6 +40,27 @@ export class FeedbackComponent implements OnInit {
        })
 
        this.feedbackObjArray.push({
+        'id' : Number(2),
+        'desc': 'def',
+        'ratings': [false,false,false,false]
+       
+      })
+
+      this.feedbackObjArray.push({
+        'id' : Number(2),
+        'desc': 'def',
+        'ratings': [false,false,false,false]
+       
+      })
+
+      this.feedbackObjArray.push({
+        'id' : Number(2),
+        'desc': 'def',
+        'ratings': [false,false,false,false]
+       
+      })
+
+      this.feedbackObjArray.push({
         'id' : Number(2),
         'desc': 'def',
         'ratings': [false,false,false,false]
@@ -213,10 +233,4 @@ class questionObj {
   desc: string | undefined;
   ratings: any;
 }
-const swalWithBootstrapButtons = Swal.mixin({
-  customClass: {
-    confirmButton: 'btn btn-success',
-    cancelButton: 'btn btn-danger'
-  },
-  buttonsStyling: false
-})
+

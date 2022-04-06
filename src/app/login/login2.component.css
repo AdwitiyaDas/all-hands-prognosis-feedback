@@ -15,7 +15,7 @@
 .loader {
     border: 12px solid #f3f3f3;
     border-radius: 50%;
-    border-top: 12px solid #84BCDA;
+    border-top: 12px solid #9FCC2E;
     width: 70px;
     height:70px;
     align-items: center;
@@ -51,11 +51,12 @@
 
 .survey-image-box
 {
-    height: 200px;
-    width: 200px;
+    height: 500px;
+    width: 500px;
     position: absolute;
-    top: 32.5vh;
+    top: 31%;
     left: 67%;
+
 }
 
 .survey-image{
@@ -73,9 +74,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-  
-    /* box-shadow: 5px 8px 8px #5FB49C; */
+   
 
 }
 
@@ -88,9 +87,7 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    background-color: transparent;
-    background-color: #84BCDA;
-    /* background-image: linear-gradient(to top left, #5FB49C, #87d2bd); */
+    background-image: linear-gradient(to top left, #71931d, #9FCC2E);
     position: relative;
 }
 .logo-box > label{
@@ -136,9 +133,9 @@
     height: 500px;
     width: 400px;   
     background-color: rgb(255, 255, 247);
-    border-right: #84BCDA solid;
-    border-top: #84BCDA solid;
-    border-bottom: #84BCDA solid;
+    border-right: #9FCC2E solid;
+    border-top: #9FCC2E solid;
+    border-bottom: #9FCC2E solid;
 
 
 }
@@ -151,7 +148,7 @@
     background-color: white;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    color: #84BCDA;
+    color: #9FCC2E;
 }
 .form_div {
     text-transform: uppercase;
@@ -175,7 +172,7 @@
     border: none;
     outline: 0;
     width: 100%;
-    border-bottom: 2px solid #84BCDA;
+    border-bottom: 2px solid #9FCC2E;
     margin-top: 8px;
 }
 .form-inputs-div>input:focus
@@ -190,9 +187,9 @@
     padding: 10px 25px;
     border: unset;
     border-radius: 15px;
-    color: #84BCDA;
+    color: #9FCC2E;
     z-index: 1;
-    background: #e8e8e8;
+    background: #fff;
     position: relative;
     font-weight: 1000;
     font-size: 17px;
@@ -214,7 +211,7 @@
     height: 100%;
     width: 0;
     border-radius: 15px;
-    background-color: #84BCDA;
+    background-color: #9FCC2E;
     z-index: -1;
     -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
     box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
